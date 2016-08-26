@@ -14,7 +14,7 @@ $xmlStr=str_replace("&",'&amp;',$xmlStr);
 return $xmlStr;
 }
 
-$dbh = pg_connect("host=localhost port=5432 dbname=ip_database user=postgres password=Viewsonic20");
+$dbh = pg_connect("host=localhost port=5432 dbname=ip_database user=postgres password=******");
 if (!$dbh) {
 die("Error in connection: " . pg_last_error());
 }
