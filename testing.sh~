@@ -1,0 +1,8 @@
+echo "Enter date as YYYY-MM-DD format"
+ read date
+ echo "enter start time in 24 hours format"
+ read stime
+ echo "enter end time in 24 hours format"
+ read etime
+#awk -F, '{print $1 }' /home/swatesh/Final/Results/data_old.csv > /home/swatesh/Final/CIDR.txt
+awk -v a="$stime" -v b="$etime" -v d="$date" -F "[: ]+" -f /home/swatesh/Final/select_time.awk /home/swatesh/test-data1.csv
